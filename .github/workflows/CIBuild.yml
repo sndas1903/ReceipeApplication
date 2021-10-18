@@ -26,15 +26,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-        
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: ReceipeApplication
-        package: my/target/*.jar
+        app-name: receipeapplication
+        package: target/*.jar
 
     # Azure logout 
     - name: logout
